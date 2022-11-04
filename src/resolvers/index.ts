@@ -1,11 +1,16 @@
 import Document from '../models/document'
 
 export const resolvers = {
+  Document: {
+    __resolveReference: async ({ id }) => {
+      return await Document.findById(id)
+    }
+  },
   Query: {
-    movies: async () => {
+    documents: async () => {
       return await Document.find({})
     },
-    movie: async (_, { id }) => {
+    document: async (_, { id }) => {
       return await Document.findById(id)
     }
   },

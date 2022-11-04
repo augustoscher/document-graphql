@@ -1,7 +1,13 @@
 import { gql } from 'apollo-server'
 
 export const typeDefs = gql`
-  type Document {
+  extend schema
+    @link(
+      url: "https://specs.apollo.dev/federation/v2.0"
+      import: ["@key", "@shareable"]
+    )
+
+  type Document @key(fields: "id") {
     id: ID!
     title: String!
     artifact: String!
@@ -19,6 +25,7 @@ export const typeDefs = gql`
     updateDocument(id: String, document: DocumentInput): Document
     deleteDocument(id: ID): Document
   }
+
   input DocumentInput {
     title: String!
     artifact: String!
