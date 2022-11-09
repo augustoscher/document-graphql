@@ -1,4 +1,4 @@
-.PHONY: help run stop rebuild
+.PHONY: help dev dev-logs stop rebuild
 
 .DEFAULT: help
 help:
@@ -10,9 +10,6 @@ help:
 	@echo "       stops the application"
 	@echo "make rebuild"
 	@echo "       rebuild containers"
-
-install:
-	yarn install
 
 dev: stop
 	docker-compose up -d
