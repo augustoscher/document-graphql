@@ -11,9 +11,6 @@ help:
 	@echo "make rebuild"
 	@echo "       rebuild containers"
 
-test:
-	yarn test
-
 install:
 	yarn install
 
