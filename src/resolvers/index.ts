@@ -3,6 +3,7 @@ import Document from '../models/document'
 export const resolvers = {
   Document: {
     __resolveReference: async ({ id }) => {
+      console.log(`resolving reference ${id}`)
       return await Document.findById(id)
     }
   },
