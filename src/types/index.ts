@@ -9,6 +9,7 @@ export const typeDefs = gql`
 
   type Document @key(fields: "id") {
     id: ID!
+    documentId: String!
     title: String!
     artifact: String!
     body: String
@@ -27,6 +28,7 @@ export const typeDefs = gql`
   }
 
   input DocumentInput {
+    documentId: String!
     title: String!
     artifact: String!
     body: String

@@ -5,6 +5,10 @@ const documentSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  documentId: {
+    type: Number,
+    required: true
+  },
   artifact: {
     type: String,
     required: true,

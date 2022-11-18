@@ -4,13 +4,14 @@ import { buildSubgraphSchema } from '@apollo/subgraph'
 import { PORT } from './config/constants'
 import { typeDefs } from './types'
 import { resolvers } from './resolvers'
-import { connectDatabase } from './config/database'
+import { connectDatabase, populateDatabase } from './config/database'
 
 const server = new ApolloServer({
   schema: buildSubgraphSchema({ typeDefs, resolvers })
 })
 
 connectDatabase()
+populateDatabase()
 
 server
   .listen({ port: PORT })
