@@ -22,3 +22,23 @@ make dev
 ```
 
 Products GraphQL subgraph will be running on [localhost:4002/graphql](http://localhost:4002/graphql)
+
+## Example
+
+This query fetch data from mongodb in document-graphql:
+
+```
+query DocumentsQuery {
+  documents {
+    id
+    documentId
+    title
+    artifact
+    body
+    # available only in documents subgraph
+    meritDecision
+    mandatoryPrecedent
+    readingTime
+  }
+}
+```
