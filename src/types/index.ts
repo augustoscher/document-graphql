@@ -7,12 +7,15 @@ export const typeDefs = gql`
       import: ["@key", "@shareable"]
     )
 
-  type Document @key(fields: "id") {
+  type Document @key(fields: "documentId") {
     id: ID!
     documentId: String!
     title: String!
     artifact: String!
     body: String
+    meritDecision: Boolean
+    mandatoryPrecedent: Boolean
+    readingTime: Int
     createdAt: String
   }
 
@@ -32,5 +35,8 @@ export const typeDefs = gql`
     title: String!
     artifact: String!
     body: String
+    meritDecision: Boolean
+    mandatoryPrecedent: Boolean
+    readingTime: Int
   }
 `

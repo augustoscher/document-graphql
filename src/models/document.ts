@@ -17,6 +17,15 @@ const documentSchema = new mongoose.Schema({
   body: {
     type: String
   },
+  meritDecision: {
+    type: Boolean
+  },
+  mandatoryPrecedent: {
+    type: Boolean
+  },
+  readingTime: {
+    type: Number
+  },
   createdAt: {
     type: Date,
     default: Date.now

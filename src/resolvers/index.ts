@@ -2,9 +2,9 @@ import Document from '../models/document'
 
 export const resolvers = {
   Document: {
-    __resolveReference: async ({ id }) => {
-      console.log(`resolving reference ${id}`)
-      return await Document.findById(id)
+    __resolveReference: async ({ documentId }) => {
+      console.log(`resolving reference ${documentId}`)
+      return await Document.findOne({ documentId })
     }
   },
   Query: {
