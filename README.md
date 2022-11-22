@@ -1,5 +1,5 @@
 # document-graphql
-Document Domain Graph Service (DGS) corresponding to the products domain from [Jus Edge GraphQL](https://github.com/augustoscher/jus-edge-graphql).
+Document Domain Graph Service (DGS) corresponding to the products domain from [Supergraph](https://github.com/augustoscher/supergraph).
 It's builded with [Apollo Federation](https://www.apollographql.com/docs/federation/) v2 which is an open source architecture for building a distributed graph.
 
 ## Requirements
