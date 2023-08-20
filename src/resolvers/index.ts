@@ -3,7 +3,7 @@ import Document from '../models/document'
 export const resolvers = {
   Document: {
     __resolveReference: async ({ documentId }) => {
-      console.log(`resolving reference ${documentId}`)
+      console.log(`[document-graphql]: returning document by id ${documentId}`)
       return await Document.findOne({ documentId })
     }
   },
